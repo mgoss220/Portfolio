@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="de">
+<head>
     <meta charset="UTF-8">
-    <title>Mein Portfolio</title>
-  </head>
-  <body>
-    <h1>Willkommen auf meiner Portfolio-Seite!</h1>
-    <p>Hier siehst du bald meine Projekte.</p>
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .portfolio-item {
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .portfolio-item h3 {
+            font-family: 'Poppins', sans-serif;
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .portfolio-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Dein Name</h1>
+    <a href="https://www.linkedin.com/in/dein-profil" target="_blank">LinkedIn</a>
+</header>
+
+<section class="portfolio">
+    <div class="portfolio-item">
+        <img src="dein-image1.jpg" alt="Werk 1">
+        <h3>Projekt 1</h3>
+        <p>Kurze Beschreibung des Projekts.</p>
+    </div>
+    <div class="portfolio-item">
+        <img src="dein-image2.jpg" alt="Werk 2">
+        <h3>Projekt 2</h3>
+        <p>Kurze Beschreibung des Projekts.</p>
+    </div>
+    <!-- Weitere Portfolio-Items hier einfügen -->
+</section>
+
+</body>
 </html>
