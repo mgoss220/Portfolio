@@ -1,0 +1,309 @@
+/* Schriftarten von eigenem Server oder hochgeladenen Dateien */
+@font-face {
+    font-family: 'BwGradual';
+    src: url(/fonts/BwGradual-Medium.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BwGradualItalic';
+    src: url(/fonts/BwGradual-MediumItalic.otf) format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Body und andere Elemente */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    padding-bottom:150px;
+}
+
+.right-side h1{
+    font-family: 'BwGradual', sans-serif;  /* Dein Name in normaler Schriftart */
+    font-weight: 100;
+    margin: 0;
+    font-size: 1.5rem;
+    margin-left:20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 20px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+header h1 a{
+    font-family: 'BwGradual', sans-serif;  /* Dein Name in normaler Schriftart */
+    font-weight: 100;
+    margin: 0;
+    font-size: 1.5rem;
+    margin-left:20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.portfolio-item {
+    position: relative;
+    padding: 0;  /* Kein zusätzlicher Abstand mehr */
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center; /* Zentriert den Inhalt */
+    align-items: center;
+    height: 200px;  /* Feste Höhe der Portfolio-Item */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%; /* Volle Höhe des Containers */
+    object-fit: cover;   /* Bild wird beschnitten, um den Container auszufüllen */
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(66, 39, 11, 0.8);  /* Angenehmes erdorange mit Transparenz */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.portfolio-item:hover img {
+    opacity: 0.8;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio-item .overlay h3 {
+    color: white;  /* Weißer Text */
+    font-family: 'BwGradualItalic', sans-serif;  /* Kursive Schriftart für Titel der Projekte */
+    font-size: 1.5rem;
+    margin: 10px 0;
+    letter-spacing: 1px;  /* Reduzierte Laufweite */
+    transition: letter-spacing 0.3s ease-in-out;
+}
+
+.portfolio-item .overlay p {
+    color: white;  /* Weißer Text */
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.2s;
+}
+
+.portfolio-item:hover .overlay h3 {
+    letter-spacing: 3px;  /* Reduzierte Laufweite bei Hover */
+}
+
+.portfolio-item:hover .overlay p {
+    opacity: 1;
+}
+
+.portfolio-item .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #656363;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight:400;
+    border-radius: 5px;
+}
+
+
+
+
+/* Video unterhalb des Grids */
+.video-section {
+    position: relative;
+    width: 100%;                /* Maximale Breite des Containers */
+    max-width: 1200px;           /* Maximale Breite für größere Bildschirme */
+    height: auto;               /* Höhe wird dynamisch basierend auf dem Video-Seitenverhältnis gesetzt */
+    display: flex;
+    justify-content: center;    /* Zentriert das Video */
+    align-items: center;        /* Zentriert das Video */
+    padding: 0 20px;            /* Rand links und rechts hinzufügen */
+    box-sizing: border-box;     /* Bezieht Padding mit ein */
+    margin: 20px auto;          /* Zentriert den Video-Container horizontal */
+}
+
+/* Das Video nimmt die vollständige Breite und Höhe des Containers ein */
+.background-video {
+    width: 100%;                /* Video nimmt 100% der Breite des Containers ein */
+    height: auto;               /* Höhe wird basierend auf der Breite und dem Seitenverhältnis gesetzt */
+    object-fit: contain;        /* Das Video wird so skaliert, dass es vollständig sichtbar bleibt */
+    z-index: 1;                 /* Video liegt unter dem Button */
+    border-radius: 8px;         /* Ecken des Videos abrunden */
+}
+
+/* Button für Ton ein/aus, immer auf dem Video, oben */
+.mute-button {
+    position: absolute;
+    top: 10px;                  /* 10px Abstand vom oberen Rand */
+    left: 20px;                 /* 20px Abstand vom linken Rand */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;                 /* Button wird über dem Video angezeigt */
+    transition: background-color 0.3s ease;
+}
+
+.mute-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Medienabfrage für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .video-section {
+        width: 90%;              /* Video nimmt 90% der Breite auf kleineren Bildschirmen ein */
+    }
+
+    .mute-button {
+        top: 10px;               /* Button bleibt oben */
+        left: 10px;              /* Weniger Abstand von links auf kleinen Bildschirmen */
+        padding: 8px 16px;       /* Kleinere Padding-Werte auf kleinen Bildschirmen */
+    }
+}
+
+
+/* Allgemeine Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header - Sticky */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    width: 100%;
+}
+
+.sticky-header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.sticky-header nav ul li {
+    margin: 0 15px;
+}
+
+.sticky-header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Hauptbereich */
+.projekt-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 30px;
+}
+
+/* Linke Seite - Chaotisches Grid */
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 15px;
+    width: 100%;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Rechte Seite - Textbereich */
+.right-side {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.right-side h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.right-side p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsivität: Anpassung für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .projekt-main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-side {
+        margin-bottom: 30px;
+    }
+
+    .right-side {
+        padding-left: 0;
+    }
+}
+

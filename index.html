@@ -4,90 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        header a {
-            text-decoration: none;
-            color: #333;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-
-        .portfolio {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 40px;
-        }
-
-        .portfolio-item {
-            background-color: #fff;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        .portfolio-item h3 {
-            font-family: 'Poppins', sans-serif;
-            margin: 10px 0;
-            font-size: 1.2rem;
-        }
-
-        .portfolio-item p {
-            font-size: 1rem;
-            color: #555;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <header>
-    <h1>Maik Gossenn</h1>
-    <a href="www.linkedin.com/in/maik-gossen-a06a99358" target="_blank">LinkedIn</a>
+    <h1><a href="index.html">Maik Gossen</a></h1>  <!-- Klickbarer Name, führt zur Homepage -->
+    <div>
+        <a href="https://www.linkedin.com/in/maik-gossen-a06a99358" target="_blank">LinkedIn</a>
+        <a href="https://www.youtube.com/playlist?list=PLvrXrFiyxTllH2zJlTxvibAhCsbvJ2EMw" target="_blank">YouTube</a>
+    </div>
 </header>
 
 <section class="portfolio">
     <div class="portfolio-item">
-        <img src="dein-image1.jpg" alt="Werk 1">
-        <h3>Projekt 1</h3>
-        <p>Kurze Beschreibung des Projekts.</p>
+        <a href="pages/projekt1.html">  <!-- Platzhalter-Link für die Projektseite -->
+            <img src="wine_thumb.png" alt="Werk 1">
+            <div class="overlay">
+                <h3>Wein</h3>
+                <p>Visuelles Branding eines Weins.</p>
+            </div>
+            <div class="badge">Branding</div>
+        </a>
     </div>
+
     <div class="portfolio-item">
-        <img src="dein-image2.jpg" alt="Werk 2">
-        <h3>Projekt 2</h3>
-        <p>Kurze Beschreibung des Projekts.</p>
+        <a href="projekt2.html">  <!-- Platzhalter-Link für die Projektseite -->
+            <img src="verbum_thumb.jpg" alt="Werk 2">
+            <div class="overlay">
+                <h3>Verlag</h3>
+                <p>Aufbau, Design und Pflege des Shops.</p>
+            </div>
+            <div class="badge">Web</div>
+        </a>
     </div>
-    <!-- Weitere Portfolio-Items hier einfügen -->
+
+    <!-- Weitere Portfolio-Items mit Platzhaltern für Links -->
+    <div class="portfolio-item">
+        <a href="projekt3.html">
+            <img src="marketing_thumb.jpg" alt="Werk 3">
+            <div class="overlay">
+                <h3>Marketing-Design</h3>
+                <p>Banner, Anzeigen und Printmaterialien </p>
+            </div>
+            <div class="badge">Marketing</div>
+        </a>
+    </div>
+
+    <div class="portfolio-item">
+        <a href="projekt4.html">
+            <img src="weltall_thumb.png" alt="Werk 4">
+            <div class="overlay">
+                <h3>Erkläranimation</h3>
+                <p>Die Sphären des Weltalls.</p>
+            </div>
+            <div class="badge">Motion-Design</div>
+        </a>
+    </div>
+
+    <div class="portfolio-item">
+        <a href="projekt5.html">
+            <img src="poetry_thumb.png" alt="Werk 5">
+            <div class="overlay">
+                <h3>Motion Poetry</h3>
+                <p>Animierte Poesie einer Künstlerin.</p>
+            </div>
+            <div class="badge">Motion-Design</div>
+        </a>
+    </div>
+
+    <div class="portfolio-item">
+        <a href="projekt6.html">
+            <img src="brezel_thumb.png" alt="Werk 6">
+            <div class="overlay">
+                <h3>Infovideo</h3>
+                <p>Wie werden Brezel hergestellt?</p>
+            </div>
+            <div class="badge">Film</div>
+        </a>
+    </div>
+
+    <div class="portfolio-item">
+        <a href="projekt7.html">
+            <img src="3d_thumb.png" alt="Werk 7">
+            <div class="overlay">
+                <h3>3D-Animation</h3>
+                <p>In Blender umgesetzte Animationen.</p>
+            </div>
+            <div class="badge">3D</div>
+        </a>
+    </div>
+
+
+    <div class="portfolio-item">
+        <a href="projekt8.html">
+            <img src="chaps_thumb.png" alt="Werk 8">
+            <div class="overlay">
+                <h3>Logo</h3>
+                <p>Logo für eine Gruppe junger Erwachsener.</p>
+            </div>
+            <div class="badge">Logo</div>
+        </a>
+    </div>
 </section>
+
+
+<section class="portfolio">
+    <!-- Deine bisherigen Portfolio-Items hier -->
+</section>
+
+<section class="portfolio">
+    <!-- Deine bisherigen Portfolio-Items hier -->
+</section>
+
+<!-- Feine graue Trennlinie -->
+
+
+<!-- Video unter dem Grid -->
+<section class="video-section">
+    <video class="background-video" id="backgroundVideo" muted autoplay loop>
+        <source src="Showreel-MaikGossen.mp4" type="video/mp4">
+        <source src="dein-video.webm" type="video/webm">
+        Dein Browser unterstützt das Videoformat nicht.
+        
+    </video>
+    <button id="muteButton" class="mute-button">Ton an</button>
+
+    <!-- Button zum Ton ein-/ausschalten -->
+    
+</section>
+
+
+<!-- JavaScript zum Steuern des Tonstatus -->
+<script>
+    // Hole das Video-Element und den Button
+    const video = document.getElementById('backgroundVideo');
+    const muteButton = document.getElementById('muteButton');
+
+    // Event-Listener für den Button
+    muteButton.addEventListener('click', function() {
+        // Toggle den 'muted' Zustand des Videos
+        video.muted = !video.muted;
+
+        // Ändere den Text des Buttons je nach Zustand
+        if (video.muted) {
+            muteButton.textContent = 'Ton an';  // Zeigt "Ton an" wenn das Video stumm ist
+        } else {
+            muteButton.textContent = 'Ton aus';  // Zeigt "Ton aus" wenn der Ton aktiviert ist
+        }
+    });
+</script>
+
 
 </body>
 </html>
